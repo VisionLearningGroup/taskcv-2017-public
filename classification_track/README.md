@@ -35,3 +35,5 @@ Please, look at [challange rules]() to make sure you are doing the right thing.
 ## Evaluation
 
 Models generate output files We have a single evaluation script shared across evaluation server and . We are using only a subset of data on evaluation server to encourage participants to share their perfomance more frequently to understand how their results compare to other participants.
+
+
