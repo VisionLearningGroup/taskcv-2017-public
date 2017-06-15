@@ -26,9 +26,9 @@ with a single `.txt` file in the root or each dataset that lists all images and 
 
 We have several base models with data readers in `/models` folder. Each model has a short README on how to run it.
 
-- "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`paper`](https://arxiv.org/abs/1702.05464) [`code`]()
-- "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`paper`](https://arxiv.org/pdf/1502.02791.pdf) [`code`]()
-- "Deep CORAL: Correlation Alignment for Deep Domain Adaptation" with Alexnet in Caffe [`code`]()
+- "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`arxiv`](https://arxiv.org/abs/1702.05464) [`code`](classification_track/models/adda/)
+- "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791) [`code`](classification_track/models/dan)
+- "Deep CORAL: Correlation Alignment for Deep Domain Adaptation" with Alexnet in Caffe [`arxiv`](https://arxiv.org/abs/1607.01719) [`code`](classification_track/models/coral)
 
 Please, look at [challange rules]() to make sure you are doing the right thing.
 
