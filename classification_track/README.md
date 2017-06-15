@@ -1,4 +1,4 @@
-## Data
+## Downloading Data
 
 First of all, you probably need some data. You should be able to get it with 
     
@@ -24,11 +24,11 @@ with a single `.txt` file in the root or each dataset that lists all images and 
 
 ## Code
 
-We have several base models with data readers in `/models` folder. Each model has a short README on how to run it.
+We have several base models with data readers in [`/models`](models) folder. Each model has a short README on how to run it.
 
-- "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`arxiv`](https://arxiv.org/abs/1702.05464) [`code`](classification_track/models/adda/)
-- "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791) [`code`](classification_track/models/dan)
-- "Deep CORAL: Correlation Alignment for Deep Domain Adaptation" with Alexnet in Caffe [`arxiv`](https://arxiv.org/abs/1607.01719) [`code`](classification_track/models/coral)
+- "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`arxiv`](https://arxiv.org/abs/1702.05464)
+- "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791)
+- "Deep CORAL: Correlation Alignment for Deep Domain Adaptation" with Alexnet in Caffe [`arxiv`](https://arxiv.org/abs/1607.01719)
 
 Please, look at [challange rules]() to make sure you are doing the right thing.
 
