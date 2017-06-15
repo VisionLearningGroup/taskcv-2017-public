@@ -6,12 +6,14 @@ First of all, you probably need some data. You should be able to get it with
     
     # ..G
     $ wget http://csr.bu.edu/ftp/visda17/clf/train.tar
-    # if link does not work, you can use the backup: 
     $ tar xvf train.tar
     
     # 2.8G
     $ wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
     $ tar xvf validation.tar  
+    
+    # if link[s] do not work or download speed is low, you can use the backup google drive
+    # ...
 
 Images are structured in folders as 
 
