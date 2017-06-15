@@ -40,3 +40,7 @@ The provided script does the following things:
 - The model is annotated with data preprocessing info, which is used in the `preprocessing` function in `adda/models/model.py`.
 - The main ADDA logic happens in `tools/train_adda.py`.
 - The adversarial discriminator model definition is in `adda/adversary.py`.
+
+## Evaluation
+
+The prediction outputs are written to the `predictions` folder.
