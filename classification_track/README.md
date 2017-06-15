@@ -1,14 +1,17 @@
 ## Data
 
 First of all, you probably need some data. You should be able to get it with 
-  
-  
-    cd your-data-location
-    wget http://csr.bu.edu/ftp/visda17/clf/train.tar
-    tar xvf train.tar
-    wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
-    tar xvf validation.tar
-  
+    
+    $ cd your-data-location
+    
+    # ..G
+    $ wget http://csr.bu.edu/ftp/visda17/clf/train.tar
+    # if link does not work, you can use the backup: 
+    $ tar xvf train.tar
+    
+    # 2.8G
+    $ wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
+    $ tar xvf validation.tar  
 
 Images are structured in folders as 
 
