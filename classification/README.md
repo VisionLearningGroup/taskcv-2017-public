@@ -2,20 +2,25 @@
 
 First of all, you probably need some data. You should be able to get it with 
     
-    cd <your-data-path>
+    $ cd your-data-location
     
-    wget http://csr.bu.edu/ftp/visda17/clf/train.tar
-    tar xvf train.tar
+    # ..G
+    $ wget http://csr.bu.edu/ftp/visda17/clf/train.tar
+    $ tar xvf train.tar
     
-    wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
-    tar xvf validation.tar  
+    # 2.8G
+    $ wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
+    $ tar xvf validation.tar  
     
+    # if link[s] do not work or download speed is low, you can use the backup google drive
+    # ...
+
 Images are structured in folders as 
 
-- `synth-v3/{category}/{object_id}/{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training
-- `coco/{category}/{object_id}.png` for valiation
+- `synth-v3/{category}/{object_id}/{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
+- `coco/{category}/{object_id}.png` or valiation
 
-with a `.txt` files in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
+with a single `.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
 ## Code
 
@@ -39,35 +44,45 @@ In both the testing and validation phases, you will be provided with a text file
 
  Both files must be included for your submission to be scored. The format of both files are identical and each text file should contain corresponding category ID for each image from the provided annotations file. Your reported results should follow the same order as the annotations and each classification should be on a new line. All images must be classified for the submission to be scored. 
 
-The classification IDs are as follows:
-> 0 – airplane 
-> 1 – bicycle
-> 2 – bus
-> 3 – car 
-> 4 – horse 
-> 5 – knife 
-> 6 – motorcycle 
-> 7 – person 
-> 8 – plant 
-> 9 – skateboard 
-> 10 – train 
+The category IDs are as follows:
+> 0 – airplane  
+
+> 1 – bicycle  
+
+> 2 – bus  
+
+> 3 – car  
+
+> 4 – horse  
+
+> 5 – knife  
+
+> 6 – motorcycle  
+
+> 7 – person  
+
+> 8 – plant  
+
+> 9 – skateboard  
+
+> 10 – train  
+ 
 > 11 – truck 
  
-An example submission is a plain text file in the single prediction per row format. 
  
 Submissions will be evaluated by calculating the classification accuracy of each category and then the mean accuracy across all categories. The leaderboard on CodaLab will display all of these scores, and the official ranking will be determined by the mean classification accuracy across all categories. 
 
+***
 
-
-Instructions for running local evaluation on validation dataset:
+### Instructions for running local evaluation on validation dataset:
 
 - Generate "source_results.txt" and "adaptation_results.txt"
 - Place these files in a directory along with the ground truth labels "ground_truth.txt" and the evaluation script
 - Run evaluation
 
+***
 
-
-Instructions for submitting to the evaluation server:
+### Instructions for submitting to the evaluation server:
 
 - Generate "source_results.txt" and "adaptation_results.txt".
 - Additionally, generate a file called "method_pretrained.txt" that contains a 0 if your method is not pretrained on ImageNet, and a 1 if it is pretrained on ImageNet. This file must be included in order for your submission to be evaluated
