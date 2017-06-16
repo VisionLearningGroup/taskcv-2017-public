@@ -34,8 +34,7 @@ Please refer to the [challenge rules]() for specific guidelines your method must
 
 ## Evaluation
 
-The models here generate output files. The script used for our evaluation server is shared with you here so that you may evaluate your results locally. However, you  
-are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
+The models here generate output files. The script used for our evaluation server is shared with you here so that you may evaluate your results locally. However, you are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
 
 
 In both the testing and validation phases, you will be provided with a text file that contains a list of image ID annotations in a random order. Your result should be in the format of two text files: one titled “source_results.txt” and the other “adaptation_results.txt”. The source file should contain your results with no adaptation performed, while the adaptation file contains your results using adaptation methods. Both files must be included for your submission to be scored. The format of both files are identical and each text file should contain corresponding category ID for each image from the provided annotations file. Your reported results should follow the same order as the annotations and each classification should be on a new line. All images must be classified for the submission to be scored. 
