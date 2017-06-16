@@ -45,18 +45,18 @@ In both the testing and validation phases, you will be provided with a text file
  Both files must be included for your submission to be scored. The format of both files are identical and each text file should contain corresponding category ID for each image from the provided annotations file. Your reported results should follow the same order as the annotations and each classification should be on a new line. All images must be classified for the submission to be scored. 
 
 The classification IDs are as follows:
-0 – airplane 
-1 – bicycle
-2 – bus
-3 – car 
-4 – horse 
-5 – knife 
-6 – motorcycle 
-7 – person 
-8 – plant 
-9 – skateboard 
-10 – train 
-11 – truck 
+\- 0 – airplane 
+\- 1 – bicycle
+\- 2 – bus
+\- 3 – car 
+\- 4 – horse 
+\- 5 – knife 
+\- 6 – motorcycle 
+\- 7 – person 
+\- 8 – plant 
+\- 9 – skateboard 
+\- 10 – train 
+\- 11 – truck 
  
 An example submission is a plain text file in the single prediction per row format. 
  
