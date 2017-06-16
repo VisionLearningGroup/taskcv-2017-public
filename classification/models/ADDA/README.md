@@ -14,29 +14,26 @@ Hopefully things should be fairly easy to run out of the box:
     mkdir data snapshot
     export PYTHONPATH="$PWD:$PYTHONPATH"
     
-After that you can run experiments:
+After that you can sets your setup:
 
-	# check that your setup is working
     scripts/svhn-mnist.sh
+    
+And run actual expediments on our data.
+    
+    scripts/synth-coco.sh
+    scripts/synth-coco-vgg16.sh
 
-    # LeNet challenge baseline
-	/scripts/synth-coco.sh
+Each of the provided scripts does the following:
 
-    # VGG16 challenge baseline
-	/scripts/synth-coco-vgg16.sh
-
-
-The provided script does the following things:
-
-- Train a base LeNet\VGG16 model on Synthetic data
+- Trains a base LeNet\VGG16 model on Synthetic data
 - Use ADDA to adapt the base model to COCO
 - Run an evaluation on COCO using the source-only model
 - Run an evaluation on COCO using the ADDA model
 
 ## Areas of interest
 
-- Check `/scripts/synth-coco-vgg16.sh` and `/scripts/synth-coco-vgg16.sh` for hyperparameters.
-- The LeNet and VGG model definitions is in `adda/models/lenet.py` and `adda/models/vgg16.py`.
+- Check `scripts/synth-coco[-vgg16].sh` for hyperparameters and general pipeline of the experiment.
+- The LeNet and VGG model definitions are in `adda/models/lenet.py` and `adda/models/vgg16.py`.
 - The model is annotated with data preprocessing info, which is used in the `preprocessing` function in `adda/models/model.py`.
 - The main ADDA logic happens in `tools/train_adda.py`.
 - The adversarial discriminator model definition is in `adda/adversary.py`.
