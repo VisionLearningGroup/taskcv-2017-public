@@ -2,25 +2,20 @@
 
 First of all, you probably need some data. You should be able to get it with 
     
-    $ cd your-data-location
+    cd <your-data-path>
     
-    # ..G
-    $ wget http://csr.bu.edu/ftp/visda17/clf/train.tar
-    $ tar xvf train.tar
+    wget http://csr.bu.edu/ftp/visda17/clf/train.tar
+    tar xvf train.tar
     
-    # 2.8G
-    $ wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
-    $ tar xvf validation.tar  
+    wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
+    tar xvf validation.tar  
     
-    # if link[s] do not work or download speed is low, you can use the backup google drive
-    # ...
-
 Images are structured in folders as 
 
-- `synth-v3/{category}/{object_id}/{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
-- `coco/{category}/{object_id}.png` or valiation
+- `synth-v3/{category}/{object_id}/{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training
+- `coco/{category}/{object_id}.png` for valiation
 
-with a single `.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
+with a `.txt` files in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
 ## Code
 
