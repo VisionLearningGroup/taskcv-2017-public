@@ -2,19 +2,13 @@
 
 First of all, you probably need some data. You should be able to get it with 
     
-    $ cd your-data-location
+    cd <your-data-path>
+    wget http://csr.bu.edu/ftp/visda17/clf/train.tar
+    tar xvf train.tar
     
-    # ..G
-    $ wget http://csr.bu.edu/ftp/visda17/clf/train.tar
-    $ tar xvf train.tar
+    wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
+    tar xvf validation.tar  
     
-    # 2.8G
-    $ wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
-    $ tar xvf validation.tar  
-    
-    # if link[s] do not work or download speed is low, you can use the backup google drive
-    # ...
-
 Images are structured in folders as 
 
 - `synth-v3/{category}/{object_id}/{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
@@ -46,27 +40,16 @@ In both the testing and validation phases, you will be provided with a text file
 
 The category IDs are as follows:
 > 0 – airplane  
-
 > 1 – bicycle  
-
 > 2 – bus  
-
 > 3 – car  
-
 > 4 – horse  
-
 > 5 – knife  
-
 > 6 – motorcycle  
-
 > 7 – person  
-
 > 8 – plant  
-
 > 9 – skateboard  
-
 > 10 – train  
- 
 > 11 – truck 
  
  
