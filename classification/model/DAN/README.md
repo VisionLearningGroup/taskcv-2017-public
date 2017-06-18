@@ -20,7 +20,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 6. **Calculate Mean Accuracy**. Run `>> exp_eval()`.
 
 ## Baseline Result
- aeroplane|	bicycle|	bus|	car|	horse|	knife|	motorcycle|	person|	pottedplant|	skateboard|	train|	truck|	mean accuracy
+ aero|	bicycle|	bus|	car|	hrs|	knf|	mtrcycle|	prsn|	plnt|	sktbd|	trn|	trck|	mean accuracy
   :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
  
 ---------------
