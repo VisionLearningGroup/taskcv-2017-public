@@ -1,0 +1,14 @@
+net: "dan_train_val_visda17.prototxt"
+test_iter: 1000
+test_interval: 1000
+base_lr: 0.0003
+lr_policy: "inv"
+gamma: 0.002
+power: 0.75
+momentum: 0.9
+display: 100
+max_iter: 50000
+snapshot: 10000
+snapshot_prefix: "trained_model"
+solver_mode: GPU
+snapshot_after_train: false
