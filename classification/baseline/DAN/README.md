@@ -1,4 +1,11 @@
-# transfer-caffe
+# Introduction
+Deep adaptation network is proposed by [Learning Transferable Features with Deep Adaptation Networks](https://arxiv.org/pdf/1502.02791.pdf). Please cite the original paper if you use any material (code, algorithm, etc) provided by the authors.
+
+# Run the baseline
+
+0. Get the modified Caffe code by cloning the repository: `git clone https://github.com/thuml/transfer-caffe.git`.
+1. **Install DAN** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help).
+3. **Prepare data** 
 
 This is a caffe repository for transfer learning. We fork the repository with version ID `29cdee7` from [Caffe](https://github.com/BVLC/caffe) and make our modifications. The main modifications are listed as follow:
 
