@@ -30,8 +30,7 @@ Please refer to the [challenge rules]() for specific guidelines your method must
 
 To evaluate the performance of your model, you should:
 - Train you model with `train` and `validation` set.
-
-
+In the 
 - Predict labels for images in `validation` set
 
 The models here generate output files. The script used for our evaluation server is shared with you here so that you may evaluate your results locally. However, you are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
