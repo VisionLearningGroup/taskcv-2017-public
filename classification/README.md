@@ -14,7 +14,7 @@ Images are structured in folders as
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
 - `validation/{category}/{object_id}.jpg` for valiation data
 
-with a single `.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
+with a single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
 ## Code
 
