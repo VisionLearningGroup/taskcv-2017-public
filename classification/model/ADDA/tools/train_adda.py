@@ -14,6 +14,7 @@ import adda
 
 
 @click.command()
+@click.argument('data_root')
 @click.argument('source')
 @click.argument('target')
 @click.argument('model')
@@ -31,7 +32,7 @@ import adda
               multiple=True)
 @click.option('--adversary_leaky/--adversary_relu', default=True)
 @click.option('--seed', type=int)
-def main(source, target, model, output,
+def main(data_root, source, target, model, output,
          gpu, iterations, batch_size, display, lr, stepsize, snapshot, weights,
          solver, adversary_layers, adversary_leaky, seed):
     # miscellaneous setup
@@ -48,6 +49,7 @@ def main(source, target, model, output,
     np.random.seed(seed + 1)
     tf.set_random_seed(seed + 2)
     error = False
+
     try:
         source_dataset_name, source_split_name = source.split(':')
     except ValueError:
@@ -55,23 +57,22 @@ def main(source, target, model, output,
         logging.error(
             'Unexpected source dataset {} (should be in format dataset:split)'
             .format(source))
+        raise click.Abort
+
     try:
         target_dataset_name, target_split_name = target.split(':')
     except ValueError:
-        error = True
         logging.error(
             'Unexpected target dataset {} (should be in format dataset:split)'
             .format(target))
-    if error:
         raise click.Abort
 
     # setup data
     logging.info('Adapting {} -> {}'.format(source, target))
-    souce_data_object = adda.data.get_dataset(source_dataset_name)
-    source_dataset = getattr(souce_data_object,
-                             source_split_name)
-    target_dataset = getattr(adda.data.get_dataset(target_dataset_name),
-                             target_split_name)
+    souce_data_object = adda.data.get_dataset(source_dataset_name, path=data_root)
+    source_dataset = getattr(souce_data_object, source_split_name)
+    target_data_object = adda.data.get_dataset(target_dataset_name, path=data_root)
+    target_dataset = getattr(target_data_object, target_split_name)
     source_im, source_label = source_dataset.tf_ops()
     target_im, target_label = target_dataset.tf_ops()
     model_fn = adda.models.get_model_fn(model)

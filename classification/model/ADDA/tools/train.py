@@ -15,6 +15,7 @@ import adda
 
 
 @click.command()
+@click.argument('data_root')
 @click.argument('dataset')
 @click.argument('split')
 @click.argument('model')
@@ -33,7 +34,7 @@ import adda
 @click.option('--ignore_label', type=int)
 @click.option('--solver', default='sgd')
 @click.option('--seed', type=int)
-def main(dataset, split, model, output, gpu, iterations, batch_size, display,
+def main(data_root, dataset, split, model, output, gpu, iterations, batch_size, display,
          lr, stepsize, snapshot, weights, weights_end, weights_scope, train_scope,
          ignore_label, solver, seed):
     adda.util.config_logging()
@@ -50,7 +51,7 @@ def main(dataset, split, model, output, gpu, iterations, batch_size, display,
     tf.set_random_seed(seed + 2)
     dataset_name = dataset
     split_name = split
-    dataset_object = adda.data.get_dataset(dataset)
+    dataset_object = adda.data.get_dataset(dataset, path=data_root)
     dataset = getattr(dataset_object, split)
     model_fn = adda.models.get_model_fn(model)
     im, label = dataset.tf_ops()

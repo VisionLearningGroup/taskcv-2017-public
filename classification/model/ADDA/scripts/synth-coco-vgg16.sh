@@ -1,23 +1,24 @@
 #!/bin/bash
 
-# start from adda home (i.e. as "bash scripts/....sh" )
-
 # abort entire script on error
 set -e
 # print before execution
 set -o xtrace
 
-# experiment name prefix
 NAME_PREFIX=fc17
-# source dataset name in adda/models
+
+DATA_ROOT=/scratch/challenge_run/new/
+
 TRAIN_DATA=vda2017s
 TEST_DATA=vda2017coco
 TRAIN_SPLIT=train
 TEST_SPLIT=train
+
 BASE_MODEL_NAME=vgg_16
+IMAGENET_WEIGHTS_PATH=/scratch/data/vgg_16.ckpt
+
 SOURCE_MODEL_NAME=$BASE_MODEL_NAME\_$TRAIN_DATA\_$TRAIN_SPLIT\_$NAME_PREFIX
 ADAPTED_MODEL_NAME=adda_$BASE_MODEL_NAME\_$TRAIN_DATA\_$TRAIN_SPLIT\_$TEST_DATA\_$TEST_SPLIT\_$NAME_PREFIX
-IMAGENET_WEIGHTS_PATH=/scratch/data/vgg_16.ckpt
 
 echo train $SOURCE_MODEL_NAME
 
@@ -28,7 +29,7 @@ DEBUG_CALL_ARGS=''
 
 # train base model on vda2017s (train)
 python $DEBUG_CALL_ARGS \
-        tools/train.py $TRAIN_DATA $TRAIN_SPLIT $BASE_MODEL_NAME $SOURCE_MODEL_NAME \
+        tools/train.py $DATA_ROOT $TRAIN_DATA $TRAIN_SPLIT $BASE_MODEL_NAME $SOURCE_MODEL_NAME \
         --iterations 10000 \
         --batch_size 50 \
         --display 10 \
@@ -41,7 +42,9 @@ python $DEBUG_CALL_ARGS \
         --train_scope fc8                  `# update only sub-scope that matches`
 
 # run adda vda2017s->vda2017coco (test)
-python tools/train_adda.py $TRAIN_DATA\:$TRAIN_SPLIT $TEST_DATA\:$TEST_SPLIT $BASE_MODEL_NAME $ADAPTED_MODEL_NAME \
+python $DEBUG_CALL_ARGS \
+       tools/train_adda.py $DATA_ROOT $TRAIN_DATA\:$TRAIN_SPLIT $TEST_DATA\:$TEST_SPLIT \
+       $BASE_MODEL_NAME $ADAPTED_MODEL_NAME \
        --iterations 10000 \
        --batch_size 50 \
        --display 10 \
