@@ -15,13 +15,13 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 "$CAFFE_ROOT/build/tools/caffe train -solver solver.prototxt -weights /path/to/your/pre-trained/model/bvlc_reference_caffenet.caffemodel -gpu GPU_ID 2>&1 | tee office_DAN.txt"
 ```
 
-5. **Testing**. Modify the deploy file path and weight path `../../exp_pred.m`, and run `>> exp_pred()`. The predicted labels are shown in the text file in `../../result/` with the most recent timestampe.
+5. **Testing**. Modify the `train_file_path`,`deploy_file_path` and `weight_path` in `../../exp_pred.m`, and run `>> exp_pred()`. The function will generate a text file containing all the  in `../../result/` with the most recent timestampe.
 
 6. **Calculate Mean Accuracy**. Run `>> exp_eval()`.
 
 ## Baseline Result
- Network|F/B(224/299)|F/B(320/395)|Download|Source
-  :---:|:---:|:---:|:---:|:---:
+ aeroplane|	bicycle|	bus|	car|	horse|	knife|	motorcycle|	person|	pottedplant|	skateboard|	train|	truck|	mean accuracy
+  :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
  
 ---------------
 In mmd-layer, parameter `loss_weight` can be tuned to give mmd loss different weights.
