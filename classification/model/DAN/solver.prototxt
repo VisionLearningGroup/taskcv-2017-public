@@ -9,6 +9,6 @@ momentum: 0.9
 display: 100
 max_iter: 50000
 snapshot: 10000
-snapshot_prefix: "trained_model"
+snapshot_prefix: "dan_visda17"
 solver_mode: GPU
 snapshot_after_train: false
