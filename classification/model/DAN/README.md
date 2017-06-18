@@ -18,7 +18,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 ## Baseline Result
  Network|F/B(224/299)|F/B(320/395)|Download|Source
   :---:|:---:|:---:|:---:|:---:
- resnet101-v2| 22.31/22.75ms | 26.02/29.50ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ 
 ---------------
 In mmd-layer, parameter `loss_weight` can be tuned to give mmd loss different weights.
 
