@@ -7,7 +7,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 
 2. **Install DAN** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help). Let's call the palce where you installed caffe `$CAFFE_ROOT`.
 
-3. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`. The file `../../data/train/image_list.txt` and `../../data/validation/image_list.txt` can be used to generate the files by replacing the relative path to absolute path. **Note**: `train.txt` and `test.txt` should be placed to the same directory with `dan_train_val_visda17.prototxt`
+3. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`. These files can be generated from `../../data/train/image_list.txt` and `../../data/validation/image_list.txt` by replacing the relative path to absolute path. **Note**: `train.txt` and `test.txt` should be placed to the same directory with `dan_train_val_visda17.prototxt`
 
 4. **Training Model**. We provide `dan_train_val_visda17.prototxt` as the network architecture, you can visualize it with [ethereon](http://ethereon.github.io/netscope/quickstart.html). The [bvlc\_reference\_caffenet.caffemodel](http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel) is used as the pre-trained model. If the `train.prototxt`, `test.prototxt` and pre-trained caffemodel are prepared, the model can be run with the following command:
 
