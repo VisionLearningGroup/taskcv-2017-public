@@ -22,6 +22,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 ## Baseline Result
  aero|	bicycle|	bus|	car|	hrs|	knf|	mtrcycle|	prsn|	plnt|	sktbd|	trn|	trck|	mean accuracy
   :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+  71	|47.4	|67.3|	31.9|	61.4|	49.9|	72.1|	36.1|	64.7|	28|	70.6|	19
  
 ---------------
 In mmd-layer, parameter `loss_weight` can be tuned to give mmd loss different weights.
