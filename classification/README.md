@@ -16,6 +16,8 @@ Images are structured in folders as
 
 with a single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
+Alternative way to download the data (Google Shared Driver): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
+
 ## Baseline
 
 We have several baseline models with data readers in [`/model`](model) folder. Each model has a short README on how to run it.
