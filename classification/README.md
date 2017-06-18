@@ -16,7 +16,7 @@ Images are structured in folders as
 
 with a single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
-## Code
+## Baseline
 
 We have several baseline models with data readers in [`/baseline`](models) folder. Each model has a short README on how to run it.
 
@@ -26,7 +26,13 @@ We have several baseline models with data readers in [`/baseline`](models) folde
 
 Please refer to the [challenge rules]() for specific guidelines your method must follow.
 
-## Evaluation
+## Evaluate your model
+
+To evaluate the performance of your model, you should:
+- Train you model with `train` and `validation` set.
+
+
+- Predict labels for images in `validation` set
 
 The models here generate output files. The script used for our evaluation server is shared with you here so that you may evaluate your results locally. However, you are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
 
@@ -55,15 +61,13 @@ The category IDs are as follows:
  
 Submissions will be evaluated by calculating the classification accuracy of each category and then the mean accuracy across all categories. The leaderboard on CodaLab will display all of these scores, and the official ranking will be determined by the mean classification accuracy across all categories. 
 
-***
 
-### Instructions for running local evaluation on validation dataset:
 
 - Generate "source_results.txt" and "adaptation_results.txt"
 - Place these files in a directory along with the ground truth labels "ground_truth.txt" and the evaluation script
 - Run evaluation
 
-***
+
 
 ### Instructions for submitting to the evaluation server:
 
