@@ -3,9 +3,9 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 
 ## Run the baseline
 
-1. Get the modified Caffe code by cloning the repository: `git clone https://github.com/thuml/transfer-caffe.git`. Let's call the palce where you installed caffe `$CAFFE_ROOT`.
+1. Get the modified Caffe code by cloning the repository: `git clone https://github.com/thuml/transfer-caffe.git`. 
 
-2. **Install DAN** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help).
+2. **Install DAN** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help). Let's call the palce where you installed caffe `$CAFFE_ROOT`.
 
 3. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`. The file `../../data/train/image_list.txt` and `../../data/validation/image_list.txt` can be used to generate the files by replacing the relative path to absolute path. **Note**: `train.txt` and `test.txt` should be placed to the same directory with `dan_train_val_visda17.prototxt`
 
