@@ -18,7 +18,7 @@ with a single `image_list.txt` file in the root or each dataset that lists all i
 
 ## Baseline
 
-We have several baseline models with data readers in [`/baseline`](models) folder. Each model has a short README on how to run it.
+We have several baseline models with data readers in [`/model`](model) folder. Each model has a short README on how to run it.
 
 - "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`arxiv`](https://arxiv.org/abs/1702.05464)
 - "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791)
