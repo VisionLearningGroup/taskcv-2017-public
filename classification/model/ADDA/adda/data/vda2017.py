@@ -18,7 +18,7 @@ class VDA2017Synthetic(DatasetGroup):
         self.image_shape = (384, 216, 3)
         self.label_shape = ()
         self.shuffle = shuffle
-        self.base_path = os.path.join(path, 'validation')
+        self.base_path = os.path.join(path, 'train')
 
 
         for split in self.file_names.keys():
