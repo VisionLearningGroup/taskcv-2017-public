@@ -14,10 +14,11 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 5. **Testing**. Modify the deploy file path and weight path `../../exp_pred.m`, and run `>> exp_pred()`. The predicted labels are shown in the text file in `../../result/` with the most recent timestampe.
 
 6. **Calculate Mean Accuracy**. Run `>> exp_eval()`.
----------------
+
 ## Baseline Result
  Network|F/B(224/299)|F/B(320/395)|Download|Source
-
-
+  :---:|:---:|:---:|:---:|:---:
+ resnet101-v2| 22.31/22.75ms | 26.02/29.50ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|[craftGBD](https://github.com/craftGBD/craftGBD)
+---------------
 In mmd-layer, parameter `loss_weight` can be tuned to give mmd loss different weights.
 
