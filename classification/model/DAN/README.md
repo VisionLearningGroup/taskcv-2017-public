@@ -5,18 +5,12 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 
 0. Get the modified Caffe code by cloning the repository: `git clone https://github.com/thuml/transfer-caffe.git`. Let's call the palce where you installed caffe `$CAFFE_ROOT`.
 1. **Install DAN** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help).
-3. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`, 
+2. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`. The file `../../data/train/image_list.txt` and `../../data/validation/image_list.txt` can be used to generate the files by replacing the relative path to absolute path. **Note**: `train.txt` and `test.txt` should be placed to the same directory with `dan_train_val_visda17.prototxt`
+3. Training Model. We provide `dan_train_val_visda17.prototxt` as the network architecture, you can visualize it with [ethereon](http://ethereon.github.io/netscope/quickstart.html). The [bvlc\_reference\_caffenet](http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel) is used as the pre-trained model. If the `train.prototxt`, `test.prototxt` and pre-trained caffemodel are prepared, the model can be run with the following command:
 
-This is a caffe repository for transfer learning. We fork the repository with version ID `29cdee7` from [Caffe](https://github.com/BVLC/caffe) and make our modifications. The main modifications are listed as follow:
-
-- Add `mmd layer` described in paper "Learning Transferable Features with Deep Adaptation Networks".
-- Add `entropy layer` and `outerproduct layer` described in paper "Unsupervised Domain Adaptation with Residual Transfer Networks".
-- Copy `grl layer` and `messenger.hpp` from repository [Caffe](https://github.com/ddtm/caffe/tree/grl).
-- Emit `SOLVER_ITER_CHANGE` message in `solver.cpp` when `iter_` changes.
-
-Data Preparation
----------------
-In `data/office/*.txt`, we give the lists of three domains in [Office](https://cs.stanford.edu/~jhoffman/domainadapt/#datasets_code) dataset.
+```
+"$CAFFE_ROOT/build/tools/caffe train -solver solver.prototxt -weights /path/to/your/pre-trined/model/bvlc_reference_caffenet.caffemodel -gpu GPU_ID 2>&1 |tee result.log"
+```
 
 Training Model
 ---------------
