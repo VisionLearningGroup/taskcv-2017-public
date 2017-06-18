@@ -12,7 +12,7 @@ First of all, you probably need some data. You should be able to get it with
 Images are structured in folders as 
 
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
-- `validation/{category}/{object_id}.png` for valiation data
+- `validation/{category}/{object_id}.jpg` for valiation data
 
 with a single `.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
 
