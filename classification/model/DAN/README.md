@@ -19,7 +19,7 @@ In `models/DAN/amazon_to_webcam`, we give an example model based on Alexnet to s
 
 The [bvlc\_reference\_caffenet](http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel) is used as the pre-trained model. If the Office dataset and pre-trained caffemodel is prepared, the example can be run with the following command:
 ```
-"./build/tools/caffe train -solver models/DAN/amazon_to_webcam/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel"
+<p>"./build/tools/caffe train -solver models/DAN/amazon_to_webcam/solver.prototxt </p> -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel"
 ```
 
 Parameter Tuning
