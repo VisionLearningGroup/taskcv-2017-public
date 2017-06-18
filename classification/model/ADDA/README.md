@@ -6,7 +6,7 @@ This code is a fork from this repo: https://github.com/erictzeng/adda/
 
 This code requires Python 3, and is implemented in Tensorflow.
 
-First download data as described in the `classification_track` root. You should also change `ROOT_DIR` and `base_path`s to your data paths in `data/vda2017.py`.
+First download data as described in the `classification_track` root. You should also update the `ROOT_DIR` variable in shell scripts below.
 
 Hopefully things should be fairly easy to run out of the box:
 

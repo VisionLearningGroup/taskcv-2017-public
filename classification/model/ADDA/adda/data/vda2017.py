@@ -6,16 +6,11 @@ import numpy as np
 from adda.data import DatasetGroup
 from adda.data.dataset import register_dataset, FilenameDataset
 
-ROOT_DIR = '/scratch/challenge_run/'
-
-
 @register_dataset('vda2017s')
 class VDA2017Synthetic(DatasetGroup):
     num_classes = 12
-    base_path = os.path.join(ROOT_DIR, 'vj6')
     file_names = {
-        'train-all': 'train_all.txt',
-        'train-grey': 'train_grey.txt',
+        'train': 'image_list.txt',
     }
 
     def __init__(self, path=None, shuffle=True, download=False):
@@ -23,6 +18,8 @@ class VDA2017Synthetic(DatasetGroup):
         self.image_shape = (384, 216, 3)
         self.label_shape = ()
         self.shuffle = shuffle
+        self.base_path = os.path.join(path, 'validation')
+
 
         for split in self.file_names.keys():
             with open(os.path.join(self.base_path, self.file_names[split])) as f:
@@ -37,9 +34,8 @@ class VDA2017Synthetic(DatasetGroup):
 @register_dataset('vda2017coco')
 class VDA2017Coco(DatasetGroup):
     num_classes = 0  # updated in init
-    base_path = os.path.join(ROOT_DIR, 'coco')
     file_names = {
-        'train': 'train_all_cat.txt'
+        'train': 'image_list.txt'
     }
 
     def __init__(self, path=None, shuffle=True, download=False):
@@ -47,6 +43,7 @@ class VDA2017Coco(DatasetGroup):
         self.image_shape = (None, None, 3)
         self.label_shape = ()
         self.shuffle = shuffle
+        self.base_path = os.path.join(path, 'validation')
 
         for split in self.file_names.keys():
             with open(os.path.join(self.base_path, self.file_names[split])) as f:
