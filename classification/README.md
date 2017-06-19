@@ -79,5 +79,5 @@ To submit your zipped result file to the [VisDA Classification challenge](https:
 
 After you submit your results to the evaluation server, you can control whether your results are publicly posted to the CodaLab leaderboard. To toggle the public visibility of your results please select either “post to leaderboard” or “remove from leaderboard.” 
  
-### Bug Report
-If you have found any bugs in classification track, please report them to <xpeng@bu.edu>, and cc to <usmn@bu.edu> <nkaushik@bu.edu>, <saenko@bu.edu>
+### Feedback and Help
+If you find any bugs please [open an issue](https://github.com/MInner/taskcv-2017-public/issues).
