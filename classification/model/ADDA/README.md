@@ -8,17 +8,17 @@ This code requires Python 3, and is implemented in Tensorflow.
 
 First download data as described in the `classification_track` root. You should also update the `ROOT_DIR` variable in shell scripts below.
 
-Hopefully things should be fairly easy to run out of the box:
+Hopefully, things should be fairly easy to run out of the box:
 
     pip install -r requirements.txt
     mkdir data snapshot
     export PYTHONPATH="$PWD:$PYTHONPATH"
     
-After that you can sets your setup:
+After that you can test your setup:
 
     scripts/svhn-mnist.sh
     
-And run actual expediments on our data.
+And run actual experiments on our data.
     
     scripts/synth-coco.sh
     scripts/synth-coco-vgg16.sh
