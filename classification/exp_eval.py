@@ -46,7 +46,7 @@ class categories():
 
 def classification_evaluation(ground_truth,predictions):
 
-    category_names = ['airplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
+    category_names = ['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
     categs = categories(category_names)
 
     with open(ground_truth) as f:
