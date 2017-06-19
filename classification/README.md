@@ -1,3 +1,5 @@
+The classification challenge uses synthetic object images rendered from CAD models as the training domain and object images cropped from the COCO dataset as the validation domain.
+
 ## Downloading Data
 
 First of all, you probably need some data. You should be able to get it with 
@@ -14,20 +16,20 @@ Images are structured in folders as
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
 - `validation/{category}/{object_id}.jpg` for validation data
 
-with a  single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. After you have downloaded and unzip the data, it should have this basic structure:
+with a  single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. After you have downloaded and unzipped the data, it should have this basic structure:
 
 ```
 data/
 data/train/                 % training data
 data/validation/            % validation data
- ... test data will be online on Sep 8th ...
+ ... test data will released later ...
 ```
 
-Alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
+An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
-## Baseline
+## Baselines
 
-We have several baseline models with data readers in [`/model`](model) folder. Each model has a short README on how to run it.
+We have several baseline models with data readers in the [`/model`](model) folder. Each model has a short README on how to run it.
 
 - "Adversarial Discriminative Domain Adaptation" (ADDA) with LeNet and VGG16 in Tensorflow [`arxiv`](https://arxiv.org/abs/1702.05464)
 - "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791)
