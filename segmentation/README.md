@@ -2,9 +2,8 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
 
 
 ## Data Acquisition
-================
+
 ### GTA5
-----
 - Download the dataset directly from the GTA website or by using the provided script.
 - https://download.visinf.tu-darmstadt.de/data/from_games/
 - The dataset and labels are available in 10 parts (sequences). 
@@ -14,7 +13,6 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
 
 
 ### CityScapes
-----------
 - Download this dataset directly from the CityScapes website: https://www.cityscapes-dataset.com/
 - Create a login account on the CityScapes website
 - Once you've logged in you may download the train, val and test annotations and images
@@ -23,12 +21,11 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
 
 
 ### Test Domain
------------
+
 - Details about the test data will be released at a later date.
 
 
 ## Example Source Model
-====================
 
 Caffe FCN Dilated GTA5 Model
 -----------------------------
@@ -40,7 +37,7 @@ Caffe FCN Dilated GTA5 Model
     - This code contains the test.py script used for evaluating the demo source model.
 
 ## Evaluate your model
-===========
+
 To run local evaluation on the CityScapes val set you may use the eval.py script. 
 
 Submission of results should be as collections of PNG format indexed image files, one per test image, with pixel indices from 0 to 18. The example baseline codebase includes code for generating results in the required format. Participants may choose to include segmentations for only a subset of the 19 classes in which case they will be evaluated on only the included classes. 
@@ -51,23 +48,41 @@ Participants should upload a single zip archive, where each output png file shou
 The segmentation classes are shown as follow:
 
 > 0 – road
+
 > 1 – sidewalk
+
 > 2 – building
+
 > 3 – wall
+
 > 4 – fence
+
 > 5 – pole
+
 > 6 – light
+
 > 7 – sign
+
 > 8 – vegetation
+
 > 9 – terrain
+
 > 10 – sky
+
 > 11 – person
+
 > 12 – rider
+
 > 13 – car
+
 > 14 – truck
+
 > 15 – bus
+
 > 16 – train
+
 > 17 – motocycle
+
 > 18 – bicycle
 
 ### Instructions for submitting to the evaluation server:
