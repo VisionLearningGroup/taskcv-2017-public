@@ -1,77 +1,98 @@
+#############################################################################
+# This file is part of VISDA-17 challenge code for the classification track.
+# It calculates the per-category and mean accuracy of your predictions 
+# compared to the ground truth.
+#
+# Please modify the following paths accordingly when you
+# call this function:
+# 1. ground_truth: path to the ground truth text file
+# 2. predictions: path to the text file with your predictions 
+#
+#############################################################################
+
 from __future__ import division 
 import numpy as np 
 import sys, os, os.path
-
 
 
 class categories():
     def __init__(self, names):
         self.names = names
         self.num_cat = len(names)
-        self.acceptable_sources = []
+        self.acceptable_predictionss = []
         for i in range(len(self.names)):
-            self.acceptable_sources.append(i)
+            self.acceptable_predictionss.append(i)
 
         self.truth = np.zeros(self.num_cat)
-        self.adaptation = np.zeros(self.num_cat)
-        self.adaptation_accuracy = np.zeros(self.num_cat)
+        self.predictions = np.zeros(self.num_cat)
+        self.predictions_accuracy = np.zeros(self.num_cat)
 
         for i in range(self.num_cat):
             self.truth[i] = 0
-            self.adaptation[i] = 0
-            self.adaptation_accuracy[i] = 0
+            self.predictions[i] = 0
+            self.predictions_accuracy[i] = 0
 
-        self.mean_adaptation_accuracy = 0
+        self.mean_predictions_accuracy = 0
 
 
-def classification_evaluation(truth_file,adaptation_file,output_file):
+###########################################################################
+# classification_evaluation 
+# 
+# inputs: ground_truth.txt and predictions.txt files
+#
+# output: per-category and mean accuracies printed in 'scores.txt'
+#
+###########################################################################
 
-    category_names = ['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
+def classification_evaluation(ground_truth,predictions):
+
+    category_names = ['airplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
     categs = categories(category_names)
 
-    with open(truth_file) as f:
+    with open(ground_truth) as f:
         truth = [x.strip('\n') for x in f.readlines()]
     f.close()
 
-    with open(adaptation_file) as f:
-        adaptation = [x.strip('\n') for x in f.readlines()]
+    with open(predictions) as f:
+        predictions = [x.strip('\n') for x in f.readlines()]
     f.close()
 
-    if len(adaptation) == 0:
-        print 'Erorr: adaptation file is empty.'
+    if len(predictions) == 0:
+        print 'Error: predictions file is empty.'
         return
 
-    if len(truth) != len(adaptation):
-        print 'Error: adaptation file does not contain the same number of elements as truth file.'
+    if len(truth) != len(predictions):
+        print 'Error: predictions file does not contain the same number of elements as truth file.'
         return
 
     for idx, category in enumerate(truth):
         truth_category = int(category)
         categs.truth[truth_category] += 1
-        adaptation_category = int(adaptation[idx])
-        if adaptation_category not in categs.acceptable_sources:
-            print 'Error: source file contains invalid entry. Please check that all category labels are valid and that the file adheres to the specified format for evaluation.'
+        predictions_category = int(predictions[idx])
+
+        if predictions_category not in categs.acceptable_predictionss:
+            print 'Error: predictions file contains invalid entry. Please check that all category labels are valid and that the file adheres to the specified format for evaluation.'
             return
 
-        if adaptation_category == truth_category:
-            categs.adaptation[adaptation_category] += 1
+        if predictions_category == truth_category:
+            categs.predictions[truth_category] += 1
 
     for i in range(categs.num_cat):
         if categs.truth[i] != 0:
-            categs.adaptation_accuracy[i] = 100*float(categs.adaptation[i]/categs.truth[i])
+            categs.predictions_accuracy[i] = 100*float(categs.predictions[i]/categs.truth[i])
 
-    categs.mean_adaptation_accuracy = float(np.mean(categs.adaptation_accuracy))
+    categs.mean_predictions_accuracy = float(np.mean(categs.predictions_accuracy))
 
-    with open(output_file, 'wb') as f:
-        f.write('mean accuracy (adaptation): ' + str(categs.mean_adaptation_accuracy) + '\n\n')
-        for i in range(len(categs.adaptation_accuracy)):
-            f.write(categs.names[i] + ' (adaptation): ' + str(categs.adaptation_accuracy[i]) + '\n\n')
+    with open('scores.txt', 'wb') as f:
+        f.write('mean accuracy: ' + str(categs.mean_predictions_accuracy) + '\n\n')
+        for i in range(len(categs.predictions_accuracy)):
+            f.write(categs.names[i] + ': ' + str(categs.predictions_accuracy[i]) + '\n\n')
     f.close()
+    
 
 if __name__ == '__main__':
 
-    truth_file = 'ground_truth.txt'
-    adaptation_file = 'adaptation_results.txt'
-    output_file = 'scores_test.txt'
+    ground_truth = 'ground_truth.txt'
+    predictions = 'predictions.txt'
 
-    classification_evaluation(truth_file, adaptation_file, output_file)
+    classification_evaluation(ground_truth,predictions)
