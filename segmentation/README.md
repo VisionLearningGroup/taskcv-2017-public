@@ -46,43 +46,24 @@ To assess performance, we rely on the standard Jaccard Index, commonly known as 
 Participants should upload a single zip archive, where each output png file should have the same name of input image, such as “frankfurt_000001_007973_leftImg8bit.png”. The files should be in the same main folder, where exactly one result file for each test image. Result image size must be equal to the input image size, i.e. 2048 x 1024 pixels.
 
 The segmentation classes are shown as follow:
-
 > 0 – road
-
 > 1 – sidewalk
-
 > 2 – building
-
 > 3 – wall
-
 > 4 – fence
-
 > 5 – pole
-
 > 6 – light
-
 > 7 – sign
-
 > 8 – vegetation
-
 > 9 – terrain
-
 > 10 – sky
-
 > 11 – person
-
 > 12 – rider
-
 > 13 – car
-
 > 14 – truck
-
 > 15 – bus
-
 > 16 – train
-
 > 17 – motocycle
-
 > 18 – bicycle
 
 ### Instructions for submitting to the evaluation server:
