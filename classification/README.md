@@ -23,7 +23,7 @@ data/validation/            % validation data
  ... test data will be online on Sep 8th ...
 ```
 
-Alternative way to download the data (Google Shared Driver): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
+Alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
 ## Baseline
 
@@ -39,7 +39,7 @@ Please refer to the [challenge rules]() for specific guidelines your method must
 
 To evaluate the performance of your model, you should:
 - Train you model with `train` and `validation` set. In the `./baseline/DAN` folder, we have provided a detailed description about how to train your own models with [Caffe](http://caffe.berkeleyvision.org/), 
-- Predict labels for images in `validation` set. See  `>> exp_pred()` as an example for Caffe (change path in the file accordingly). The prediction function will generate a text file with timestamp to `./result`. This text file can be used for submission to the evaluation server.
+- Predict labels for images in `validation` set. See  [exp_pred.m](exp_pred.m) as an example for Caffe (change path in the file accordingly). The prediction function will generate a text file with timestamp to `./result`. This text file can be used for submission to the evaluation server.
 - Calculate the mean accuracy. We have shared the script used for our evaluation server (`exp_eval.py` or `exp_pred.m`) here. However, you are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
 
 In the testing phases, you will be provided with a text file that contains a list of image ID labels in a random order. Your result should be in the format of two text files:
