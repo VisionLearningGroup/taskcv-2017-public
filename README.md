@@ -9,3 +9,5 @@ You can find the development kits for the two competition tracks by following th
 - [segmentation track](segmentation) 
 
 Have fun!
+
+If you find any bugs please [open an issue](https://github.com/MInner/taskcv-2017-public/issues).
