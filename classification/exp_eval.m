@@ -11,7 +11,7 @@ function result = exp_eval()
 % ---------------------------------------------------------
 
 % ---------------- User Configuration----------------------
-pred_file_path = './result/prediction.txt';
+pred_file_path = './result/example_prediction.txt';
 gt_path = './result/val_ground_truth.txt';
 % ------------------End of configuration--------------------
 
