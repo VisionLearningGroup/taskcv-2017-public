@@ -78,6 +78,6 @@ Submissions will be evaluated by calculating the classification accuracy of each
 To submit your zipped result file to the [VisDA Classification challenge](https://competitions.codalab.org/competitions/17020?secret_key=cb4cb9f3-3f9e-4179-858b-4ecd6c3b58f1) click on the “Participate” tab. Select the phase (validation or testing). Select “Submit / View Results, fill in the required fields and click “Submit”. A pop-up will prompt you to select the results zip file for upload. After the file is uploaded the evaluation server will begin processing. This might take some time. To view the status of your submission please select “Refresh Status”. If the status of your submission is “Failed” please check your file is named correctly and has the right format. You may refer to the scoring output and error logs for more details.
 
 After you submit your results to the evaluation server, you can control whether your results are publicly posted to the CodaLab leaderboard. To toggle the public visibility of your results please select either “post to leaderboard” or “remove from leaderboard.” 
-
+ 
 ### Bug Report
 If you have found any bugs in classification track, please report them to <xpeng@bu.edu>, and cc to <usmn@bu.edu> <nkaushik@bu.edu>, <saenko@bu.edu>
