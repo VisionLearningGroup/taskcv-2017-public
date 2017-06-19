@@ -29,9 +29,9 @@ python tools/train_adda.py $DATA_ROOT svhn:train mnist:train lenet adda_lenet_sv
 # evaluate trained models
 echo 'Source only baseline:'
 mkdir -p predictions
-python tools/eval_classification.py mnist train lenet snapshot/lenet_svhn \
+python tools/eval_classification.py $DATA_ROOT mnist train lenet snapshot/lenet_svhn \
             predictions/lenet_svhn.txt
 
 echo 'ADDA':
-python tools/eval_classification.py mnist train lenet snapshot/adda_lenet_svhn_mnist \
+python tools/eval_classification.py $DATA_ROOT mnist train lenet snapshot/adda_lenet_svhn_mnist \
             predictions/adda_lenet_svhn_mnist.txt
