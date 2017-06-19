@@ -27,8 +27,7 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
 
 ## Example Source Model
 
-Caffe FCN Dilated GTA5 Model
------------------------------
+### Caffe FCN Dilated GTA5 Model
 - Eval script: scripts/val_frontend.sh
 - Model: dilation10_gta5_frontend.caffemodel
 - Caffe dilation code: https://github.com/fyu/caffe-dilation
@@ -66,7 +65,7 @@ The segmentation classes are shown as follow:
 > 17 – motocycle  
 > 18 – bicycle  
 
-### Instructions for submitting to the evaluation server:
+### Instructions for submitting to the evaluation server (Coming Soon):
 Once the evaluation server becomes available, you will be able to submit your results:
 - Generate a folder "pred_dir" that contains all of your predictions.
 - Additionally, generate a file called "method_pretrained.txt" that contains a 0 if your method is not pretrained on ImageNet, and a 1 if it is pretrained on ImageNet. This file must be included in order for your submission to be evaluated.
