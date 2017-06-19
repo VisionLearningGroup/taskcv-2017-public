@@ -74,7 +74,7 @@ Submissions will be evaluated by calculating the classification accuracy of each
 
 
 
-### Submitting to the Evaluation Server:
+### Submitting to the Evaluation Server (Coming Soon):
 
 Once the server becomes available, you will be able to submit your results:
 - Generate "source_results.txt" and "adaptation_results.txt".
@@ -82,7 +82,7 @@ Once the server becomes available, you will be able to submit your results:
 - Place these files into a zip file named [team_name]_submission
 - Submit to CodaLab evaluation server following the instructions below
 
-To submit your zipped result file to the [VisDA Classification challenge]() click on the “Participate” tab. Select the phase (validation or testing). Select “Submit / View Results, fill in the required fields and click “Submit”. A pop-up will prompt you to select the results zip file for upload. After the file is uploaded, the evaluation server will begin processing. This might take some time. To view the status of your submission please select “Refresh Status”. If the status of your submission is “Failed” please check your file is named correctly and has the right format. You may refer to the scoring output and error logs for more details.
+To submit your zipped result file to the VisDA Classification challenge click on the “Participate” tab. Select the phase (validation or testing). Select “Submit / View Results, fill in the required fields and click “Submit”. A pop-up will prompt you to select the results zip file for upload. After the file is uploaded, the evaluation server will begin processing. This might take some time. To view the status of your submission please select “Refresh Status”. If the status of your submission is “Failed” please check your file is named correctly and has the right format. You may refer to the scoring output and error logs for more details.
 
 After you submit your results to the evaluation server, you can control whether your results are publicly posted to the CodaLab leaderboard. To toggle the public visibility of your results please select either “post to leaderboard” or “remove from leaderboard.” 
  
