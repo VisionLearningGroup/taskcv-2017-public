@@ -48,8 +48,8 @@ for i = 1:length(paths)
     f = net.forward({input});
     f = mean(squeeze(f{1}),2)';
     [max_act, pred_label] =max(f);
-    fprintf('Predicting %d/%d image as %s.\n', i, length(labels), category{pred_label-1});
-    fprintf();
+    fprintf('Predicting %d/%d image as %s.\n', i, length(labels), category{pred_label});
+    fprintf(fid_prediction, '%d\n', pred_label -1 );
 end
 fclose all;
 
