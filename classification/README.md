@@ -38,16 +38,15 @@ Please refer to the [challenge rules]() for specific guidelines your method must
 ## Evaluate your model
 
 To evaluate the performance of your model, you should:
-- Train you model with `train` and `validation` set. In the `./baseline/DAN` folder, we have provided a detailed description about how to train your own models with [Caffe](http://caffe.berkeleyvision.org/), 
-- Predict labels for images in `validation` set. See  [exp_pred.m](exp_pred.m) as an example for Caffe (change path in the file accordingly). The prediction function will generate a text file with timestamp to `./result`. This text file can be used for submission to the evaluation server.
-- Calculate the mean accuracy. We have shared the script used for our evaluation server ([exp_eval.py](exp_eval.py) or [exp_pred.m](exp_pred.m)) here. However, you are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
+- Train you model with train and validation set. See ./model folder for instructions on running baseline experiments.
+- Predict labels for images in validation set.
+- Calculate the mean accuracies for each category and mean of these accuracies. You are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
 
-In the testing phases, you will be provided with a text file that contains a list of image ID labels in a random order. Your result should be in the format of two text files:
+We have shared the script used for our evaluation server (exp_eval.py or exp_pred.m) that does exactly that.
 
-- “source_results.txt”, which contains your results with no adaptation performed 
-- “adaptation_results.txt”, which contains your results using adaptation methods
+For Caffe, see exp_pred.m for instruction on how to generate a prediction file (change path in the file accordingly). For Tensorflow, predictions are stored in ./predictions folder and written by the eval\_\* scripts. Generated text files can be used for submission to the evaluation server. 
 
- Both files must be included for your submission to be scored. The format of both files are identical and each text file should contain corresponding category ID for each image label from the provided file. Your reported results should follow the same order as the image ID labels and each classification should be on a new line. All images must be classified for the submission to be scored. 
+In the testing phases, you will be provided with a text file that contains a list of image ID labels in a random order. Your result should be in the format of two text files: “source_results.txt”, which contains your results with no adaptation performed and “adaptation_results.txt”, which contains your results using adaptation methods.
 
 The category IDs are as follows:
 > 0 – aeroplane  
