@@ -29,12 +29,12 @@ Confmat = double(Confmat);
 sub_accuracy=zeros(category_num,1);
 
 fprintf('Sub-accuracy:\n');
-fprintf('=================');
+fprintf('=================\n');
 for j =1:category_num
 	Confmat(:,j) = Confmat(:,j)/x_sum(j);
-	sub_accuracy(j) = C(j,j);
-	fprintf('%s | %0.1f\n', category(j) ,sub_accuracy(j)*100);
+	sub_accuracy(j) = Confmat(j,j);
+	fprintf(['%10s | %0.1f\n'], category{j} ,sub_accuracy(j)*100);
 end
 
 fprintf('\n\n');
-fprintf('Mean accuracy: %.2f\n', sum(sub_accuracy)/length(sub_accuracy));
+fprintf('Mean accuracy: %.2f\n', 100*sum(sub_accuracy)/length(sub_accuracy));
