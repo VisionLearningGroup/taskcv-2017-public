@@ -1,4 +1,4 @@
-The classification challenge uses synthetic object images rendered from CAD models as the training domain and object images cropped from the COCO dataset as the validation domain.
+The classification challenge uses synthetic object images rendered from CAD models as the training domain and real object images cropped from the COCO dataset as the validation domain.
 
 ## Downloading Data
 
@@ -27,7 +27,7 @@ data/validation/            % validation data
 
 An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
-## Baselines
+## Baselines and Rules
 
 We have several baseline models with data readers in the [`/model`](model) folder. Each model has a short README on how to run it.
 
@@ -35,20 +35,20 @@ We have several baseline models with data readers in the [`/model`](model) folde
 - "Learning Transferable Features with Deep Adaptation Networks" (DAN) with Alexnet in Caffe [`arxiv`](https://arxiv.org/pdf/1502.02791)
 - "Deep CORAL: Correlation Alignment for Deep Domain Adaptation" with Alexnet in Caffe [`arxiv`](https://arxiv.org/abs/1607.01719)
 
-Please refer to the [challenge rules]() for specific guidelines your method must follow.
+Please refer to the [challenge rules](http://ai.bu.edu/visda-2017/) for specific guidelines your method must follow.
 
-## Evaluate your model
+## Evaluating your Model
 
-To evaluate the performance of your model, you should:
-- Train you model with train and validation set. See ./model folder for instructions on running baseline experiments.
-- Predict labels for images in validation set.
-- Calculate the mean accuracies for each category and mean of these accuracies. You are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
+To evaluate the performance of your adaptation model, you should:
+- Train you model with training data (with labels) and adapt it on the validation data (without labels). See the ./model folder for instructions on running baseline experiments.
+- Predict labels for images in the validation set.
+- Calculate the mean accuracies for each category and the overall mean of these accuracies. You are encouraged to upload your results to the evaluation server to compare your performance with that of other participants. 
 
-We have shared the script used for our evaluation server (exp_eval.py or exp_pred.m) that does exactly that.
+We have shared the evaluation scripts that will be used by our evaluation server (exp_eval.py or exp_pred.m) so you can evaluate offline.
 
 For Caffe, see exp_pred.m for instruction on how to generate a prediction file (change path in the file accordingly). For Tensorflow, predictions are stored in ./predictions folder and written by the eval\_\* scripts. Generated text files can be used for submission to the evaluation server. 
 
-In the testing phases, you will be provided with a text file that contains a list of image ID labels in a random order. Your result should be in the format of two text files: “source_results.txt”, which contains your results with no adaptation performed and “adaptation_results.txt”, which contains your results using adaptation methods.
+In the testing phase, you will be provided with a text file that contains a list of image ID labels in a random order. Your results should be in the format of two text files: “source_results.txt”, which contains your results with no adaptation performed and “adaptation_results.txt”, which contains your results using adaptation methods.
 
 The category IDs are as follows:
 > 0 – aeroplane  
@@ -69,8 +69,9 @@ Submissions will be evaluated by calculating the classification accuracy of each
 
 
 
-### Instructions for submitting to the evaluation server:
+### Submitting to the Evaluation Server:
 
+Once the server becomes available, you can submit your results:
 - Generate "source_results.txt" and "adaptation_results.txt".
 - Additionally, generate a file called "method_pretrained.txt" that contains a 0 if your method is not pretrained on ImageNet, and a 1 if it is pretrained on ImageNet. This file must be included in order for your submission to be evaluated
 - Place these files into a zip file named [team_name]_submission
