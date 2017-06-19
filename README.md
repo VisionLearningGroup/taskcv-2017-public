@@ -6,6 +6,6 @@ This is the main repository for the VisDA2017 Challenge. Here you can find detai
 
 You can get more detailes on how to set up an environment for different tracks by following those links:
 - [classification track](classification)
-- [sementation track](sementation) 
+- [segmentation track](segmentation) 
 
 Have fun!
