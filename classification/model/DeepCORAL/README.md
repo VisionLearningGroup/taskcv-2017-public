@@ -22,6 +22,4 @@ Deep CORAL is proposed by [Deep CORAL: Correlation Alignment for Deep Domain Ada
 ## Baseline Result
  aero|	bicycle|	bus|	car|	hrs|	knf|	mtrcycle|	prsn|	plnt|	sktbd|	trn|	trck|	mean accuracy
   :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-  
- 
-76.5	|31.8	|60.2	|35.3	|45.7	|48.4|	55	|28.9	|56.4	|28.2	|60.9	|19.1|	45.53
+76.5	|31.8	|60.2	|35.3	|45.7	|48.4|	55	|28.9	|56.4	|28.2	|60.9	|19.1|	45.53 
