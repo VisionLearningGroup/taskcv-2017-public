@@ -14,7 +14,14 @@ Images are structured in folders as
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
 - `validation/{category}/{object_id}.jpg` for valiation data
 
-with a single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :).
+with a single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. Folder names won't be avaliable upon test time :). After you have downloaded and unzip the data, it should have this basic structure:
+
+```
+data/
+data/train/                 % training data
+data/validation/            % validation data
+ ... test data will be online on 8th Sep ...
+```
 
 Alternative way to download the data (Google Shared Driver): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
