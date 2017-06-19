@@ -22,6 +22,8 @@ And run actual expediments on our data.
     
     scripts/synth-coco.sh
     scripts/synth-coco-vgg16.sh
+    
+For any network (`vgg16` in our example) you can use `--weights` option to pass checkpoint with imagenet pre-trained weights; see other related options in `scripts/synth-coco-vgg.sh`.
 
 Each of the provided scripts does the following:
 
