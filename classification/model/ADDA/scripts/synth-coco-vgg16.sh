@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# abort entire script on error
 set -e
-# print before execution
 set -o xtrace
 
 NAME_PREFIX=fc17

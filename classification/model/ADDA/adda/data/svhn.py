@@ -23,11 +23,10 @@ class SVHN(DatasetGroup):
     """
 
     base_url = 'http://ufldl.stanford.edu/housenumbers/'
-
+    num_classes = 10
     data_files = {
             'train': 'train_32x32.mat',
             'test': 'test_32x32.mat',
-            #'extra': 'extra_32x32.mat',
             }
 
     def __init__(self, path=None, shuffle=True):

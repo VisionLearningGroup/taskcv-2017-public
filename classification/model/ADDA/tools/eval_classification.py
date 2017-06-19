@@ -16,13 +16,14 @@ def format_array(arr):
 
 
 @click.command()
+@click.argument('data_root')
 @click.argument('dataset')
 @click.argument('split')
 @click.argument('model')
 @click.argument('weights')
 @click.argument('output_file')
 @click.option('--gpu', default='0')
-def main(dataset, split, model, weights, gpu, output_file):
+def main(data_root, dataset, split, model, weights, gpu, output_file):
     adda.util.config_logging()
     if 'CUDA_VISIBLE_DEVICES' in os.environ:
         logging.info('CUDA_VISIBLE_DEVICES specified, ignoring --gpu flag')
@@ -32,9 +33,7 @@ def main(dataset, split, model, weights, gpu, output_file):
 
     f = open(output_file, 'w')
 
-    dataset_name = dataset
-    split_name = split
-    dataset = adda.data.get_dataset(dataset, shuffle=False)
+    dataset = adda.data.get_dataset(dataset, path=data_root, shuffle=False)
     split = getattr(dataset, split)
     model_fn = adda.models.get_model_fn(model)
     im, label = split.tf_ops(capacity=2)

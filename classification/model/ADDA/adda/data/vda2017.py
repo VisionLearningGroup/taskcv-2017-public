@@ -6,6 +6,7 @@ import numpy as np
 from adda.data import DatasetGroup
 from adda.data.dataset import register_dataset, FilenameDataset
 
+
 @register_dataset('vda2017s')
 class VDA2017Synthetic(DatasetGroup):
     num_classes = 12
@@ -19,7 +20,6 @@ class VDA2017Synthetic(DatasetGroup):
         self.label_shape = ()
         self.shuffle = shuffle
         self.base_path = os.path.join(path, 'train')
-
 
         for split in self.file_names.keys():
             with open(os.path.join(self.base_path, self.file_names[split])) as f:
