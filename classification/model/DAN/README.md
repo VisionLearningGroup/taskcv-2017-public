@@ -12,7 +12,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 4. **Training Model**. We provide `dan_train_val_visda17.prototxt` as the network architecture, you can visualize it with [ethereon](http://ethereon.github.io/netscope/quickstart.html). The [bvlc\_reference\_caffenet.caffemodel](http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel) is used as the pre-trained model. If the `train.prototxt`, `test.prototxt` and pre-trained caffemodel are prepared, the model can be run with the following command:
 
 ```
-"$CAFFE_ROOT/build/tools/caffe train -solver solver.prototxt -weights /path/to/your/pre-trained/model/bvlc_reference_caffenet.caffemodel -gpu GPU_ID 2>&1 | tee office_DAN.txt"
+"$CAFFE_ROOT/build/tools/caffe train -solver solver.prototxt -weights /path/to/your/pre-trained/model/bvlc_reference_caffenet.caffemodel -gpu GPU_ID 2>&1 | tee DAN_result.txt"
 ```
 
 5. **Testing**. Modify the `train_file_path`,`deploy_file_path` and `weight_path` in `../../exp_pred.m`, and run `>> exp_pred()`. The function will generate a text file containing all the  in `../../result/` with the most recent timestampe.
