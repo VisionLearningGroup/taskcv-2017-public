@@ -47,7 +47,7 @@ for i = 1:length(paths)
 		img = tmp_im;
     end
     input_data = prepare_image(img, img_mean_path, crop_size);
-    f = net.forward({input});
+    f = net.forward({input_data});
     f = mean(squeeze(f{1}),2)';
     [max_act, pred_label] =max(f);
     fprintf('Predicting %d/%d image as %s.\n', i, length(labels), category{pred_label});
