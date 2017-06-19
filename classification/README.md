@@ -23,7 +23,7 @@ data/validation/            % validation data
  ... test data will be online on Sep 8th ...
 ```
 
-Alternative way to download the data (Google Shared Driver): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
+Alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
 ## Baseline
 
