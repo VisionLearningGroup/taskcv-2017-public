@@ -2,6 +2,8 @@
 
 This code is a fork from this repo: https://github.com/erictzeng/adda/
 
+Note that we did not tune parameters of ADDA adaptation for synthetic-to-real adaptation, so the source model performance is relatively high when one uses VGG16 pre-trained on Imagenet, but adaptation performance might quite low out of the box. You are encouraged to edit hyper parameters and the code to improve adaptation performance.
+
 ## Getting started
 
 This code requires Python 3, and is implemented in Tensorflow.
