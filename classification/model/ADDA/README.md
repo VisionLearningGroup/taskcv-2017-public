@@ -23,7 +23,7 @@ And run actual expediments on our data.
     scripts/synth-coco.sh
     scripts/synth-coco-vgg16.sh
     
-For any network (`vgg16` in our example) you can use `--weights` option to pass checkpoint with imagenet pre-trained weights; see other related options in `scripts/synth-coco-vgg.sh`.
+For any network (`vgg16` in our example) you can use `--weights` option to pass a checkpoint file with imagenet pre-trained weights. There are some other options with comments listed in `scripts/synth-coco-vgg.sh`. We used `VGG16` weights from [`tensorflow/models/slim`](https://github.com/tensorflow/models/tree/master/slim#pre-trained-models).
 
 Each of the provided scripts does the following:
 
