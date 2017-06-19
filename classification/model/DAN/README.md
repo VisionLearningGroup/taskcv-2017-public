@@ -15,7 +15,7 @@ Deep adaptation network is proposed by [Learning Transferable Features with Deep
 "$CAFFE_ROOT/build/tools/caffe train -solver solver.prototxt -weights /path/to/your/pre-trained/model/bvlc_reference_caffenet.caffemodel -gpu GPU_ID 2>&1 | tee DAN_result.txt"
 ```
 
-5. **Testing**. Modify the `train_file_path`,`deploy_file_path` and `weight_path` in `../../exp_pred.m`, and run `>> exp_pred()`. The function will generate a text file containing all the  in `../../result/` with the most recent timestampe.
+5. **Testing**. Modify the `test_file_path`,`deploy_file_path` and `weight_path` in `../../exp_pred.m`, and run `>> exp_pred()`. The function will generate a text file containing all the  in `../../result/` with the most recent timestampe.
 
 6. **Calculate Mean Accuracy**. Run `>> exp_eval()`.
 
