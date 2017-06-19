@@ -14,19 +14,19 @@ function result = exp_pred()
 
 % ---------------- User Configuration----------------------
  
-test_file_path = '/path/to/your/test.txt';
+test_file_path = '/scratch/workspace/ICCV17_challendge/baseline-v3/alexnet_coco_coco/test.txt';
 % e.g. ./model/DAN/test.txt
-deploy_file_path = '/path/to/your/deploy.prototxt';
+deploy_file_path = '/scratch/workspace/ICCV17_challendge/extract_feature/deploy_12.prototxt';
 % e.g. ./model/DAN/dan_deploy_visda17.prototxt
-weight_path = '/path/to/your/trained/caffemodel';
+weight_path = '/scratch/workspace/ICCV17_challendge/baseline-v3/alexnet_coco_coco/high_iter_40000.caffemodel';
 % e.g. ./model/DAN/dan_visda17_iteration_40000.caffemodel
-caffe_root = '/path/to/your/caffe/root_dir'; 
+caffe_root = '/home/grad2/xpeng/workspace/caffe'; 
 % e.g. /home/workspace/visda17/model/DAN/caffe
 
 % ------------------End of user configuration----------------
 
 addpath([caffe_root '/matlab']);
-fid_predicton = fopen(['./result/prediciton_' datestr(now, 30) '.txt'],'w');
+fid_prediction = fopen(['./result/prediciton_' datestr(now, 30) '.txt'],'w');
 category = {'aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', ...
     'motorcycle' , 'person',  'plant', 'skateboard',  'train', 'truck'};
 category_num = 12;
