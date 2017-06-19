@@ -20,7 +20,7 @@ with a single `image_list.txt` file in the root or each dataset that lists all i
 data/
 data/train/                 % training data
 data/validation/            % validation data
- ... test data will be online on 8th Sep ...
+ ... test data will be online on Sep 8th ...
 ```
 
 Alternative way to download the data (Google Shared Driver): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
