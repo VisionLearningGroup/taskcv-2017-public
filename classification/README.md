@@ -81,3 +81,7 @@ After you submit your results to the evaluation server, you can control whether 
  
 ### Feedback and Help
 If you find any bugs please [open an issue](https://github.com/MInner/taskcv-2017-public/issues).
+
+### Acknowledgement
+
+The `section_id` in the file name indicates the 3D model dataset used to get this image. We used manually chosen subsets of [ShapenetCore](https://www.shapenet.org/), [NTU 3D](http://3d.csie.ntu.edu.tw/~dynamic/database/index.html), [SHREC 2010](http://www.itl.nist.gov/iad/vug/sharp/contest/2010/Generic3DWarehouse/) with some labels retrieved from [TSB](http://www.kde.cs.tut.ac.jp/benchmark/tsb/) and our own collection of 3D CAD models from 3D Warehouse SketchUp.
