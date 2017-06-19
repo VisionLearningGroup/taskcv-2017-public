@@ -8,14 +8,17 @@
 # 1. ground_truth: path to the ground truth text file
 # 2. predictions: path to the text file with your predictions 
 #
+# or use as
+#   python exp_eval.py --io <ground_truth_file_name> <predictions_file>
 #############################################################################
 
-from __future__ import division 
+from __future__ import division
+from __future__ import print_function
 import numpy as np 
 import sys, os, os.path
 
 
-class categories():
+class Categories:
     def __init__(self, names):
         self.names = names
         self.num_cat = len(names)
@@ -44,25 +47,26 @@ class categories():
 #
 ###########################################################################
 
-def classification_evaluation(ground_truth,predictions):
+def classification_evaluation(ground_truth_fn, predictions_fn):
+    category_names = ['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 
+                      'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
+    categs = Categories(category_names)
 
-    category_names = ['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
-    categs = categories(category_names)
-
-    with open(ground_truth) as f:
+    with open(ground_truth_fn) as f:
         truth = [x.strip('\n') for x in f.readlines()]
     f.close()
 
-    with open(predictions) as f:
+    with open(predictions_fn) as f:
         predictions = [x.strip('\n') for x in f.readlines()]
     f.close()
 
     if len(predictions) == 0:
-        print 'Error: predictions file is empty.'
+        print('Error: predictions file is empty.')
         return
 
     if len(truth) != len(predictions):
-        print 'Error: predictions file does not contain the same number of elements as truth file.'
+        print('Error: predictions file does not contain the same number '
+              'of elements as truth file.')
         return
 
     for idx, category in enumerate(truth):
@@ -71,7 +75,9 @@ def classification_evaluation(ground_truth,predictions):
         predictions_category = int(predictions[idx])
 
         if predictions_category not in categs.acceptable_predictionss:
-            print 'Error: predictions file contains invalid entry. Please check that all category labels are valid and that the file adheres to the specified format for evaluation.'
+            print('Error: predictions file contains invalid entry. Please '
+                  'check that all category labels are valid and that the '
+                  'file adheres to the specified format for evaluation.')
             return
 
         if predictions_category == truth_category:
@@ -83,7 +89,7 @@ def classification_evaluation(ground_truth,predictions):
 
     categs.mean_predictions_accuracy = float(np.mean(categs.predictions_accuracy))
 
-    with open('scores.txt', 'wb') as f:
+    with open('scores.txt', 'w') as f:
         f.write('mean accuracy: ' + str(categs.mean_predictions_accuracy) + '\n\n')
         for i in range(len(categs.predictions_accuracy)):
             f.write(categs.names[i] + ': ' + str(categs.predictions_accuracy[i]) + '\n\n')
@@ -91,8 +97,11 @@ def classification_evaluation(ground_truth,predictions):
     
 
 if __name__ == '__main__':
+    if '--io' in sys.argv:
+        args = sys.argv[sys.argv.index('--io')+1:]
+        ground_truth_fn, predictions_fn = args
+    else:
+        ground_truth_fn = 'val_ground_truth.txt'
+        predictions_fn = 'example_prediction.txt'
 
-    ground_truth = 'ground_truth.txt'
-    predictions = 'predictions.txt'
-
-    classification_evaluation(ground_truth,predictions)
+    classification_evaluation(ground_truth_fn, predictions_fn)
