@@ -74,7 +74,7 @@ Submissions will be evaluated by calculating the classification accuracy of each
 
 
 
-### Submitting to the Evaluation Server (Coming Soon):
+### Submitting to the Evaluation Server
 
 Once the server becomes available, you will be able to submit your results:
 - Generate "source_results.txt" and "adaptation_results.txt".
