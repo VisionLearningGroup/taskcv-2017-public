@@ -44,4 +44,4 @@ Each of the provided scripts does the following:
 
 ## Evaluation
 
-The prediction outputs are written to the `predictions` folder. Please follow [evaluation instructions](/classification#evaluation).
+The prediction outputs are written to the `predictions` folder. Please follow [evaluation instructions](/classification#evaluation). Numbers reported as `Overall accuracy` are different from those used by our evaluation metric.
