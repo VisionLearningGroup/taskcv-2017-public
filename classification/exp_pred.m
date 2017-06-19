@@ -25,7 +25,7 @@ caffe_root = '/path/to/your/caffe/root_dir';
 
 % ------------------End of user configuration----------------
 
-addpath([caffe_root './matlab']);
+addpath([caffe_root '/matlab']);
 fid_predicton = fopen(['./result/prediciton_' datestr(now, 30) '.txt'],'w');
 category = {'aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', ...
     'motorcycle' , 'person',  'plant', 'skateboard',  'train', 'truck'};
@@ -85,7 +85,7 @@ images(:,:,:,5) = ...
     permute(im(center:center+CROPPED_DIM-1,center:center+CROPPED_DIM-1,:), ...
         [2 1 3]);
 images(:,:,:,10) = images(end:-1:1, :, :, curr);
-end
+
 
 
 
