@@ -27,6 +27,11 @@ data/validation/            % validation data
 
 An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
 
+### Training Domain Generation
+
+The training domain was custom-generated for the challenge. The `section_id` in the file name indicates the 3D model dataset used to get this image. We used manually chosen subsets of [ShapenetCore](https://www.shapenet.org/), [NTU 3D](http://3d.csie.ntu.edu.tw/~dynamic/database/index.html), [SHREC 2010](http://www.itl.nist.gov/iad/vug/sharp/contest/2010/Generic3DWarehouse/) with some labels retrieved from [TSB](http://www.kde.cs.tut.ac.jp/benchmark/tsb/) and our own collection of 3D CAD models from 3D Warehouse SketchUp.
+A technical report detailing the data generation process will be released in the near future. 
+
 ## Baselines and Rules
 
 We have several baseline models with data readers in the [`/model`](model) folder. Each model has a short README on how to run it.
@@ -71,19 +76,16 @@ Submissions will be evaluated by calculating the classification accuracy of each
 
 ### Submitting to the Evaluation Server:
 
-Once the server becomes available, you can submit your results:
+Once the server becomes available, you will be able to submit your results:
 - Generate "source_results.txt" and "adaptation_results.txt".
 - Additionally, generate a file called "method_pretrained.txt" that contains a 0 if your method is not pretrained on ImageNet, and a 1 if it is pretrained on ImageNet. This file must be included in order for your submission to be evaluated
 - Place these files into a zip file named [team_name]_submission
 - Submit to CodaLab evaluation server following the instructions below
 
-To submit your zipped result file to the [VisDA Classification challenge](https://competitions.codalab.org/competitions/17020?secret_key=cb4cb9f3-3f9e-4179-858b-4ecd6c3b58f1) click on the “Participate” tab. Select the phase (validation or testing). Select “Submit / View Results, fill in the required fields and click “Submit”. A pop-up will prompt you to select the results zip file for upload. After the file is uploaded the evaluation server will begin processing. This might take some time. To view the status of your submission please select “Refresh Status”. If the status of your submission is “Failed” please check your file is named correctly and has the right format. You may refer to the scoring output and error logs for more details.
+To submit your zipped result file to the [VisDA Classification challenge]() click on the “Participate” tab. Select the phase (validation or testing). Select “Submit / View Results, fill in the required fields and click “Submit”. A pop-up will prompt you to select the results zip file for upload. After the file is uploaded, the evaluation server will begin processing. This might take some time. To view the status of your submission please select “Refresh Status”. If the status of your submission is “Failed” please check your file is named correctly and has the right format. You may refer to the scoring output and error logs for more details.
 
 After you submit your results to the evaluation server, you can control whether your results are publicly posted to the CodaLab leaderboard. To toggle the public visibility of your results please select either “post to leaderboard” or “remove from leaderboard.” 
  
 ### Feedback and Help
 If you find any bugs please [open an issue](https://github.com/MInner/taskcv-2017-public/issues).
 
-### Acknowledgement
-
-The `section_id` in the file name indicates the 3D model dataset used to get this image. We used manually chosen subsets of [ShapenetCore](https://www.shapenet.org/), [NTU 3D](http://3d.csie.ntu.edu.tw/~dynamic/database/index.html), [SHREC 2010](http://www.itl.nist.gov/iad/vug/sharp/contest/2010/Generic3DWarehouse/) with some labels retrieved from [TSB](http://www.kde.cs.tut.ac.jp/benchmark/tsb/) and our own collection of 3D CAD models from 3D Warehouse SketchUp.
