@@ -2,11 +2,13 @@ function result = exp_pred()
 
 % ---------------------------------------------------------
 % This file is part of VISDA-17 challenge code. 
-% This function is to predict. 
+% This function is to predict the labels for the testing images. 
 % Please modify the following paths accordingly when you
 % call this function:
-% 1. pred_file_path : path to your prediction text file
-% 2. gt_file_path   : path to the ground truth text file 
+% 1. test_file_path : path to your prediction text file
+% 2. deploy_file_path : path to the deploy file
+% 3. weight_path: path to the caffemodel
+% 4. caffe_root: path to the caffe root dir
 % Contact: Xingchao Peng (xpeng@bu.edu)
 % ---------------------------------------------------------
 
