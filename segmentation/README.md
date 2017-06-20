@@ -1,9 +1,9 @@
-Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as the validation domain.
+The VisDA Semantic Segmentation challenge uses GTA5 as the source domain and CityScapes as the validation domain.
 
 
 ## Data Acquisition
 
-### GTA5
+### Training Domain: GTA5
 - Download the dataset directly from the GTA website or by using the provided script.
 - https://download.visinf.tu-darmstadt.de/data/from_games/
 - The dataset and labels are available in 10 parts (sequences). 
@@ -12,7 +12,7 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
     - Edit the base_gta folder path to download to desired directory
 
 
-### CityScapes
+### Validation Domain: CityScapes
 - Download this dataset directly from the CityScapes website: https://www.cityscapes-dataset.com/
 - Create a login account on the CityScapes website
 - Once you've logged in you may download the train, val and test annotations and images
@@ -22,7 +22,7 @@ Semantic segmentation challenge uses GTA5 as the source domain and CityScapes as
 
 ### Test Domain
 
-- Details about the test data will be released at a later date.
+- Details about the test data will be released at a later date, see [challenge website](http://ai.bu.edu/visda-2017/).
 
 
 ## Example Source Model
