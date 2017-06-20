@@ -2,7 +2,15 @@ The classification challenge uses synthetic object images rendered from CAD mode
 
 ## Downloading Data
 
-First of all, you probably need some data. You should be able to get it with 
+By downloading these datasets you agree to the following terms:
+
+### Terms of Use
+- You will use the data only for non-commercial research and educational purposes.
+- You will NOT distribute the images.
+- The organizers make no representations or warranties regarding the data, including but not limited to warranties of non-infringement or fitness for a particular purpose.
+- You accept full responsibility for your use of the data.
+
+You can download the datasets with 
     
     cd ./data
     wget http://csr.bu.edu/ftp/visda17/clf/train.tar
