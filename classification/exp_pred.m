@@ -34,6 +34,7 @@ crop_size = 227;
 phase = 'test';
 img_mean_path = [caffe_root '/matlab/+caffe/imagenet/ilsvrc_2012_mean.mat'];
 net = caffe.Net(deploy_file_path, weight_path, phase);
+caffe.set_mode_gpu();
 
 [paths, labels] = textread(test_file_path, '%s %d');
 
