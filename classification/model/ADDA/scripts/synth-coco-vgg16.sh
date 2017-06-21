@@ -55,9 +55,9 @@ python $DEBUG_CALL_ARGS \
 # evaluate trained models and write predictions into predictions/$model.txt
 echo 'Source only baseline:'
 mkdir -p predictions
-python tools/eval_classification.py $TEST_DATA $TEST_SPLIT $BASE_MODEL_NAME \
+python tools/eval_classification.py $DATA_ROOT $TEST_DATA $TEST_SPLIT $BASE_MODEL_NAME \
             snapshot/$SOURCE_MODEL_NAME predictions/$SOURCE_MODEL_NAME.txt
 
 echo 'ADDA':
-python tools/eval_classification.py $TEST_DATA $TEST_SPLIT $BASE_MODEL_NAME \
+python tools/eval_classification.py $DATA_ROOT $TEST_DATA $TEST_SPLIT $BASE_MODEL_NAME \
             snapshot/$ADAPTED_MODEL_NAME predictions/$ADAPTED_MODEL_NAME.txt
