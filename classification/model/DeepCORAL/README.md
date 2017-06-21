@@ -3,7 +3,7 @@ Deep CORAL is proposed by [Deep CORAL: Correlation Alignment for Deep Domain Ada
 
 ## Run the baseline
 
-1. Get the modified Caffe code by cloning the repository: `https://github.com/baochens/Caffe-Deep_CORAL.git`. 
+1. Get the modified Caffe code by cloning the repository: `git clone https://github.com/baochens/Caffe-Deep_CORAL.git`. 
 
 2. **Install Deep CORAL** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help). Let's call the palce where you installed caffe `$CAFFE_ROOT`.
 
