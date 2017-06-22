@@ -16,8 +16,8 @@ The VisDA Semantic Segmentation challenge uses GTA5 as the source domain and Cit
 - Download this dataset directly from the CityScapes website: https://www.cityscapes-dataset.com/
 - Create a login account on the CityScapes website
 - Once you've logged in you may download the train, val and test annotations and images
-  - Annotations: gtFine_trainvaltest.zip (241MB) https://www.cityscapes-dataset.com/file-handling/?packageID=1
-  - Images: leftImg8bit_trainvaltest.zip (11GB) https://www.cityscapes-dataset.com/file-handling/?packageID=3
+  - Annotations: [gtFine_trainvaltest.zip](https://www.cityscapes-dataset.com/file-handling/?packageID=1) (241MB) 
+  - Images: [leftImg8bit_trainvaltest.zip](https://www.cityscapes-dataset.com/file-handling/?packageID=3) (11GB) 
 
 
 ### Test Domain
@@ -29,7 +29,7 @@ The VisDA Semantic Segmentation challenge uses GTA5 as the source domain and Cit
 
 ### Caffe FCN Dilated GTA5 Model
 - Eval script: scripts/val_frontend.sh
-- Model: dilation10_gta5_frontend.caffemodel
+- Model: [dilation10_gta5_frontend.caffemodel](https://drive.google.com/open?id=0Bzb5kJao1_gMYlB0VmFmTXQ3eTg)
 - Caffe dilation code: https://github.com/fyu/caffe-dilation
     - Make with python_layers and make sure to make pycaffe
 - Dilation code: https://github.com/fyu/dilation
