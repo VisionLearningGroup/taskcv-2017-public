@@ -86,6 +86,8 @@ We are using CodaLab to evaluate results and host the leaderboards for this chal
  
 - image classification (pretrained on ImageNet)
 - image classification (no pretraining)
+
+Links will be added to these competitions shortly when they go live.
  
 Please enter and submit your results to the competition that corresponds to your method. Pretraining is only allowed on ImageNet. If you develop a pretrained method and one that is not pretrained, you are welcome to submit the corresponding results to both competitions. 
  
