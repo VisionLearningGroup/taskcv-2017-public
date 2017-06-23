@@ -66,13 +66,14 @@ The segmentation classes are shown as follow:
 > 17 – motocycle  
 > 18 – bicycle  
 
+
 ### Evaluation Server
 We are using CodaLab to host evaluation for this challenge. For this track, there are two competitions with separate leaderboards:
  
 - image segmentation (pretrained on ImageNet)
 - image segmentation (no pretraining)
  
-Links will be added to these competitions shortly when they go live.
+Links will be added to these competitions shortly once they go live.
  
 Please enter and submit your results to the competition that corresponds to your method. Pretraining is only allowed on ImageNet. If you develop both pretrained and unpretrained methods, you are welcome to submit the corresponding results to both competitions. Please see the "Evaluation" tab in the competition for more details on competition participation and leaderboard organization. 
  
