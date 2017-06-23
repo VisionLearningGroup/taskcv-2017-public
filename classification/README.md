@@ -84,10 +84,8 @@ Submissions will be evaluated by calculating the classification accuracy of each
  
 We are using CodaLab to evaluate results and host the leaderboards for this challenge. For this track, there are two competitions with separate leaderboards:
  
-- image classification (pretrained on ImageNet)
-- image classification (no pretraining)
-
-Links will be added to these competitions shortly when they go live.
+- [image classification (pretrained on ImageNet)](https://competitions.codalab.org/competitions/17052)
+- [image classification (no pretraining)](https://competitions.codalab.org/competitions/17053)
  
 Please enter and submit your results to the competition that corresponds to your method. Pretraining is only allowed on ImageNet. If you develop a pretrained method and one that is not pretrained, you are welcome to submit the corresponding results to both competitions. 
  
