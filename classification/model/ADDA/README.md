@@ -2,7 +2,7 @@
 
 This code is a fork from this repo: https://github.com/erictzeng/adda/
 
-Note that we did not tune parameters of ADDA adaptation for synthetic-to-real adaptation, so the source model performance is relatively high when one uses VGG16 pre-trained on Imagenet, but adaptation performance might quite low out of the box. You are encouraged to edit hyper parameters and the code to improve adaptation performance.
+This is reference code, we did not tune parameters of ADDA adaptation for synthetic-to-real adaptation. The source model performance is relatively high when one uses VGG16 pre-trained on Imagenet, but adaptation performance is low with this set of parameters. You are encouraged to start from this code and present your own model to improve adaptation performance.
 
 ## Getting started
 
