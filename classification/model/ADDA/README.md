@@ -27,9 +27,9 @@ And run actual experiments on our data.
     
 For any network (`vgg16` in our example) you can use `--weights` option to pass a checkpoint file with imagenet pre-trained weights. There are some other options with comments listed in `scripts/synth-coco-vgg.sh`. We used `VGG16` weights from [`tensorflow/models/slim`](https://github.com/tensorflow/models/tree/master/slim#pre-trained-models).
 
-Each of the provided scripts does the following:
+Provided scripts do the following:
 
-- Trains a base LeNet\VGG16 model on Synthetic data
+- Train a base LeNet\VGG16 model on Synthetic data
 - Use ADDA to adapt the base model to COCO
 - Run an evaluation on COCO using the source-only model
 - Run an evaluation on COCO using the ADDA model
