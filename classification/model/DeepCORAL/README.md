@@ -5,7 +5,7 @@ Deep CORAL is proposed by [Deep CORAL: Correlation Alignment for Deep Domain Ada
 
 1. Get the modified Caffe code by cloning the repository: `git clone https://github.com/baochens/Caffe-Deep_CORAL.git`. 
 
-2. **Install Deep CORAL** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help). Let's call the palce where you installed caffe `$CAFFE_ROOT`.
+2. **Install Deep CORAL** (See [Caffe installation Instructions](http://caffe.berkeleyvision.org/installation.html) for help). Let's call the place where you installed caffe `$CAFFE_ROOT`.
 
 3. **Data Preparation**: To run the model, you should prepare `train.txt`, `test.txt`. These files can be generated from `../../data/train/image_list.txt` and `../../data/validation/image_list.txt` by replacing the relative path to absolute path. **Note**: `train.txt` and `test.txt` should be placed to the same directory with `deepcoral_train_val_visda17.prototxt`
 
