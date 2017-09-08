@@ -37,7 +37,7 @@ data/validation/            % validation data
 data/test/                  % test data
 ```
 
-An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing), [test.tar]()
+An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing), [test.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdGttZ0k2dmJYQ2c/view?usp=sharing)
 
 ### Training Domain Generation
 
