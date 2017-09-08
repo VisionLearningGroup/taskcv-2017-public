@@ -68,13 +68,7 @@ The segmentation classes are shown as follow:
 
 
 ### Evaluation Server
-We are using CodaLab to host evaluation for this challenge. For this track, there are two competitions with separate leaderboards:
- 
-- [image segmentation (pretrained on ImageNet)](https://competitions.codalab.org/competitions/17054)
-- [image segmentation (no pretraining)](https://competitions.codalab.org/competitions/17055)
- 
-Please enter and submit your results to the competition that corresponds to your method. Pretraining is only allowed on ImageNet. If you develop both pretrained and unpretrained methods, you are welcome to submit the corresponding results to both competitions. Please see the "Evaluation" tab in the competition for more details on competition participation and leaderboard organization. 
- 
+We are using CodaLab to evaluate results and host the leaderboards for this challenge. You can find the image classification competition [here](https://competitions.codalab.org/competitions/17054). Please see the "Evaluation" tab in the competition for more details on leaderboard organization.  
  
 ### Submitting to the evaluation server
 Once the evaluation server becomes available, you will be able to submit your results:
