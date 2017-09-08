@@ -19,21 +19,25 @@ You can download the datasets with
     wget http://csr.bu.edu/ftp/visda17/clf/validation.tar
     tar xvf validation.tar  
     
+    wget http://csr.bu.edu/ftp/visda17/clf/test.tar
+    tar xvf test.tar
+    
 Images are structured in folders as 
 
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
 - `validation/{category}/{object_id}.jpg` for validation data
+- `test/truck_id/{MD5_hash_code}.jpg` for test data
 
-with a  single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels. After you have downloaded and unzipped the data, it should have this basic structure:
+with a  single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels for train/val subset. For test data, only images are provided. After you have downloaded and unzipped the data, it should have this basic structure:
 
 ```
 data/
 data/train/                 % training data
 data/validation/            % validation data
- ... test data will released later ...
+data/test/                  % test data
 ```
 
-An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing)
+An alternative way to download the data (Google Drive): [train.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmdENwQ3R4TUVTMHc/view?usp=sharing), [validation.tar](https://drive.google.com/file/d/0BwcIeDbwQ0XmUEVJRjl4Tkd4bTA/view?usp=sharing), [test.tar]()
 
 ### Training Domain Generation
 
