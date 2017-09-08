@@ -26,7 +26,7 @@ Images are structured in folders as
 
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
 - `validation/{category}/{object_id}.jpg` for validation data
-- `test/truck_id/{MD5_hash_code}.jpg` for test data
+- `test/trunk_id/{MD5_hash_code}.jpg` for test data
 
 with a  single `image_list.txt` file in the root or each dataset that lists all images and corresponding labels for train/val subset. For test data, only images are provided. After you have downloaded and unzipped the data, it should have this basic structure:
 
