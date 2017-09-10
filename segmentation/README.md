@@ -24,8 +24,8 @@ The VisDA Semantic Segmentation challenge uses GTA5 as the source domain and Cit
 - You can download the dataset with 
 ```
 cd ./data
-wget http://csr.bu.edu/ftp/visda17/clf/test.tar
-tar xvf test.tar
+wget http://csr.bu.edu/ftp/visda17/seg/test.zip
+tar xvf test.zip
 ```
     
 - Or, download the dataset directly from this [link](http://csr.bu.edu/ftp/visda17/seg/test.zip).
