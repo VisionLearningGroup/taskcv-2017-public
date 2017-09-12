@@ -29,23 +29,32 @@ def compute_mIoU(gt_dir, pred_dir, devkit_dir='', dset='cityscapes'):
     """
     Compute IoU given the predicted colorized images and 
     """
-    with open(join(devkit_dir,'data', dset, 'info.json'), 'r') as fp:
+    with open(join(devkit_dir,'data/cityscapes/info.json'), 'r') as fp:
       info = json.load(fp)
     num_classes = np.int(info['classes'])
+    print('Num classes', num_classes)
     name_classes = np.array(info['label'], dtype=np.str)
     mapping = np.array(info['label2train'], dtype=np.int)
     palette = np.array(info['palette'], dtype=np.uint8)
     hist = np.zeros((num_classes, num_classes))
-    image_path_list = join(devkit_dir, 'data', dset, 'image.txt')
-    label_path_list = join(devkit_dir, 'data', dset, 'label.txt')
-
-    gt_imgs = open(label_path_list, 'rb').read().splitlines()
-    pred_imgs = open(image_path_list, 'rb').read().splitlines()
+    if dset == 'cityscapes':
+        image_path_list = join(devkit_dir, 'data', dset, 'image.txt')
+        label_path_list = join(devkit_dir, 'data', dset, 'label.txt')
+        gt_imgs = open(label_path_list, 'r').read().splitlines()
+        gt_imgs = [join(gt_dir, x) for x in gt_imgs]
+        pred_imgs = open(image_path_list, 'r').read().splitlines()
+        pred_imgs = [join(pred_dir, x.split('/')[-1]) for x in pred_imgs]
+    else:
+        gt_imgs = sorted(open(gt_dir, 'r').read().splitlines())
+        pred_imgs = sorted(open(pred_dir, 'r').read().splitlines())
 
     for ind in range(len(gt_imgs)):
-        pred = np.array(Image.open(join(pred_dir, pred_imgs[ind].split('/')[-1])))
-        label = np.array(Image.open(join(gt_dir, gt_imgs[ind])))
+        pred = np.array(Image.open(pred_imgs[ind]))
+        label = np.array(Image.open(gt_imgs[ind]))
         label = label_mapping(label, mapping)
+        if len(label.flatten()) != len(pred.flatten()):
+            print('Skipping: len(gt) = {:d}, len(pred) = {:d}, {:s}, {:s}'.format(len(label.flatten()), len(pred.flatten()), gt_imgs[ind], pred_imgs[ind]))
+            continue
         hist += fast_hist(label.flatten(), pred.flatten(), num_classes)
         if ind > 0 and ind % 10 == 0:
             print('{:d} / {:d}: {:0.2f}'.format(ind, len(gt_imgs), 100*np.mean(per_class_iu(hist))))
@@ -69,4 +78,3 @@ if __name__ == "__main__":
     parser.add_argument('--dset', default='cityscapes', help='For the challenge use the validation set of cityscapes.')
     args = parser.parse_args()
     main(args)
-    
