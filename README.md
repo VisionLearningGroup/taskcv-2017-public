@@ -8,6 +8,18 @@ You can find the development kits (beta release) for the two competition tracks 
 - [classification track](classification)
 - [segmentation track](segmentation) 
 
-Have fun!
+
+If you consider using data, code or its derivatives, please consider citing:
+
+```
+@misc{1710.06924,
+Author = {Xingchao Peng and Ben Usman and Neela Kaushik and Judy Hoffman and Dequan Wang and Kate Saenko},
+    Title = {VisDA: The Visual Domain Adaptation Challenge},
+    Year = {2017},
+    Eprint = {arXiv:1710.06924},
+}
+```
 
 If you find any bugs please [open an issue](https://github.com/MInner/taskcv-2017-public/issues).
+
+Have fun!
