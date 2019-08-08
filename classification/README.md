@@ -22,7 +22,7 @@ You can download the datasets with
     wget http://csr.bu.edu/ftp/visda17/clf/test.tar
     tar xvf test.tar
     
-    wget http://csr.bu.edu/ftp/visda17/clf/image_list_gt_test.txt
+    wget https://raw.githubusercontent.com/VisionLearningGroup/taskcv-2017-public/master/classification/data/image_list.txt
     
 Images are structured in folders as 
 
