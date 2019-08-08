@@ -22,6 +22,8 @@ You can download the datasets with
     wget http://csr.bu.edu/ftp/visda17/clf/test.tar
     tar xvf test.tar
     
+    wget http://csr.bu.edu/ftp/visda17/clf/image_list_gt_test.txt
+    
 Images are structured in folders as 
 
 - `train/{category}/{section_id}_{object_id}_{cam_yaw}_{light_yaw}_{cam_pitch}.png` for training synthetic data and
