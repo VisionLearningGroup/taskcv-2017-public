@@ -1,4 +1,7 @@
 The classification challenge uses synthetic object images rendered from CAD models as the training domain and real object images cropped from the COCO dataset as the validation domain.
+## NEWS!
+
+We have release the ground truth labels for test domain! You can download the ground truth from [GroundTruth](https://raw.githubusercontent.com/VisionLearningGroup/taskcv-2017-public/master/classification/data/image_list.txt)
 
 ## Downloading Data
 
